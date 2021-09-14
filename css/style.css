@@ -62,106 +62,125 @@ body {
   max-width: 100vw;
 }
 .container{
-  width: 80vw;
+  width: 140rem;
+  width: 85vw;
   margin: 0 auto;
 }
 /* -------------------------------- */
 
 /* header */
 .header{
-  position: fixed;
+  position: absolute;
   width: 100vw;
   max-width: 100vw;
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-  background: white;
-  z-index: 999999;
+  z-index: 999;
 }
-.header .container{
+.header-top{
+
+  background: rgba(255, 255, 255, 1);
+}
+.header-top .container{
+  position: relative;
   display: flex;
   height: 5rem;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
-.__go-story{
+.header-top a{
   display: block;
-  width: 20%;
-  height: 30%;
+  padding: 0 2em;
+  color: rgba(134, 89, 201, 1);
+
 }
-.__go-story > span{
-  display: block;
+.go-story > span{
   text-align: center;
   color: rgba(212, 184, 234, .5);
 }
-.__go-story:hover > span{
+.go-story:hover > span{
   color: rgba(212, 184, 234, 1);
 }
-
 /* gnb */
 .gnb{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100vh;
+  width: 300px;
   max-height: 100vh;
-  box-shadow: 3px 0 6px 1px rgba(0, 0, 0, .05);
-  background: white;
+  padding: 1em 0;
+  margin-top: 5em;
+  background: #F5F5F5;
+}
+.gnb > *{
+  margin: 0 auto;
 }
 .gnb__depth1{
-  position: relative;
-  padding-top: 100px;
+  width: 95%;
+  height: 400px;
+  padding: 1em 0;
+  border-radius: 1em;
+  background: #f1eff2;
 }
-.gnb__depth1 > li{
-  width: 80%;
-  margin: 10px auto;
+nav > ul > li{
+  width: 90%;
+  margin: 0 auto;
 }
-.gnb__depth1 > li > a{
+nav > ul > li > a{
   display: block;
   width: 100%;
-  height: 30px;
-  padding: 8px 0 0 25px;
-  margin-bottom: 10px;
-  
+  height: 35px;
+  padding: .6em 1.5em;  
+  margin-bottom: .5em;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bolder;
-  border-radius: 20px;
-  background: rgba(212, 184, 234, .5);
-}
-.gnb__depth1 > li:last-child > a{
-  margin-top: 100px;
-  color: #999;
-  background: rgba(0, 0, 0, .05);
-}
-.gnb__depth1 > li:last-child > a:hover{
-  color: #111;
-  background: rgba(0, 0, 0, .1);
-}
 
+  color: rgba(134, 89, 201, 1);
+  border-radius: 1em;
+  background: rgba(231, 227, 233, 1);
+}
+.gnb__depth1 > li > a > span{
+  float: right;
+}
+/* gnb depth2 */
 .gnb__depth2{
   position: relative;
   display: block;
   width: 90%;
-  padding: 10px 0 10px 30px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, .05);
+  margin: 1em auto;
   border-radius: 10px;
 }
 .gnb__depth2 li{
-  list-style: '-  ';
+  list-style: '- ';
+  list-style-position: inside;
   padding: 3px 0;
+  text-indent: 1.5em;
 }
 .gnb__depth2 li a{
-  font-size: 1.2rem;
-  color: rgba(0, 0, 0, .5);
+  font-size: 1.4rem;
+  color: rgba(162, 162, 162, 1);
 }
 .gnb__depth2 li a:hover{
   font-weight: bolder;
   color: rgba(0, 0, 0, 1);
   transition: all ease .1s;
 }
-
-
+/* gnb temp */
+.gnb__temp{
+  width: 100%;
+  height: 30%;
+}
+/* gnb links */
+.gnb__link{
+  position: relative;
+}
+.gnb__link > em{
+  display: block;
+  padding: 1em 1em;
+  font-size: 1.4rem;
+  color: rgba(171, 171, 171, 1);
+}
+.header .gnb__link> li > a{
+  
+  border-radius: 1em;
+  color: rgba(109, 109, 109, 1);
+}
 /* main */
 main{
   position: relative;
@@ -170,44 +189,44 @@ main{
 .main__home{
   position: relative;
   width: 100%;
-  /* height: calc(100vh - 5rem); */
   height: 100vh;
-  padding-top: 10rem;
+  padding-top: 5rem;
+  background: url('../images/bg.png') no-repeat center;
+  background-size: cover;
 }
 .main__visual{
   display: block;
-  width: 100%;
-  height: 90%;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
   background: url('../images/main_visual.png') no-repeat center;
-  background-size: 1150px auto;
+  background-size: 60vw 60vw;
 }
+
 
 /* welcome */
 .welcome{
   position: relative;
+}
+.welcome .container{
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #D4B8EA;
 }
-.welcome__txtbox{
-  width: 70vw;
-  padding: 5vw 30px;
-  
-  border-radius: 3vw;
-  line-height: 1.8;
-  letter-spacing: 1px;
+.welcome-textbox{
+  width: 50%;
+  height: 50%;
+  margin-left: 350px;
+}
+.welcome-textbox h3{
+  font-size: 2.8rem;
+  font-weight: bolder;
+  padding: 1em 0;
+}
+.welcome-textbox p{
   font-size: 1.4rem;
-  background: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .6));
-  border: 1px solid rgba(255, 255, 255, .3);
+  line-height: 1.8;
 }
-.welcome__txtbox h3{
-  padding-bottom: 3rem;
-}
-.welcome__txtbox p a{
-  display: inline-block;
-  width: 5em;
-  font-weight: 800;
-  background: rgb(255, 145, 0, 0.3);
+.welcome-textbox p a{
+  background: coral;
 }

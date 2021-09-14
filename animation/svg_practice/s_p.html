@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="../../images/favi">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favi/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favi/favicon-16x16.png">
+  <link rel="manifest" href="../../images/favi/site.webmanifest">
+  <link rel="mask-icon" href="../../images/favi/safari-pinned-tab.svg" color="#735eb4">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>sinri's lab</title>
+
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+  <!-- <script src="js/prefixfree.min.js"></script> -->
+  <script src="../../js/respond.min.js"></script> 
+  
+  <script defer type="text/javascript" src="../../js/jquery.min.js"></script>
+  <script defer type="text/javascript" src="s_p_scp.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="s_p_style.css">
+</head>
+<body>
+  <div class="go-home">
+    <a href="../../index.html" class="button-back">
+      <svg id="home-button" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="30" fill="purple"/>
+        <text x="50" y="55" font-size="14" text-anchor="middle" fill="white">home</text>
+      </svg>
+    </a>
+  </div>
+
+  <div class="container">
+
+    <h6>ABOUT SVG</h6>
+    <p>with mdn..</p>
+  
+    <!-- ex1 -->
+    <svg version="1.1" baseProfile="full" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="red" />
+      <circle cx="150" cy="100" r="80" fill="orange"/>
+      <text x="150" y="100" font-size="40" text-anchor="middle" fill="white">about svg</text>
+    </svg>
+  
+    <!-- ex2 w*h 의 캔버스에 (00)(300 300)를 출력한다 -->
+    <svg width="100" height="200" viewBox="0 0 400 300">
+      <rect width="100%" height="100%" fill="purple"/>
+    </svg>
+    <!-- <svg width="300" height="200" viewBox="100 0 400 300">
+      <rect width="100%" height="100%" fill="purple"/>
+    </svg> -->
+  
+  
+    <!-- ex3 -->
+    <svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="5" height="10" stroke="blue" fill="transparent" stroke-width="3"/>
+      <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+      <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+  
+      <circle cx="25" cy="75" r="20" stroke="red" stroke-width="5" fill="transparent"/>
+      <ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" stroke-width="5" fill="transparent"/>
+  
+      <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180" stroke="yellow" fill="transparent" stroke-width="2"/>
+  
+      <line x1="10" x2="50" y1="110" y2="150" stroke="orange" stroke-width="5"/>
+      <line x1="0" x2="100" y1="0" y2="200" stroke="blue" stroke-width="2"/>
+  
+      <polyline points="60 110 65 120 70 115 75 130 75 130 80 125 85 140 100 200" stroke="orange" fill="transparent" stroke-width="3"/>
+      <polyline points="60 110 65 120 70 115 75 130 75 130 80 125 85 140 100 200" fill="blue" stroke-width="3"/>
+  
+      <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="green" stroke-width="5"/>
+    </svg>
+  
+    <!-- ex4 path -->
+    <svg width="300" height="200" viewBox="0 0 300 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <!-- M H V Z -->
+      <path d="M0 0 H 90 V 90 H 10 " fill="blue" stroke="white" stroke-width="7"/>
+      <path d="m60 10 h 100 v 100 h 0 z" fill="black" stroke="white"/>
+      <path d="m50 50 h 80 v 80 h -80 z" fill="skyblue" stroke="red"/>
+    </svg>
+  
+    <svg width="500" height="200" viewBox="0 0 500 300" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <!-- ex5 3차 베지어 곡선 C cubic -->
+      <path d="m10 10 c 20 20, 40 20, 50 10" stroke="pink" stroke-width="7" fill="transparent"/>
+      <path d="m 70 10 c 100 20, 20 20, 120 10" stroke="purple" stroke-width="7" fill="transparent"/>
+      <!-- 3차 베지어 곡선 명령어 S -->
+      <path d="m10 80 c 40 10, 65 10, 95 80 S 50 150, 110 80" stroke="black" stroke-width="5"/>
+      <!-- 2차 베지어 곡선 Q -->
+      <path d="m10 80 q 95 10 180 10" stroke="red" stroke-width="10" fill="transparent"/>
+      <!-- 3차와 2차 곡선을 연결하는 명령어 T -->
+      <path d="m10 80 q52.5 10, 95 80 t180 80" stroke="lime" stroke-width="5" fill="transparent"/>
+    </svg>
+  
+    <svg width="300" height="300" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <!-- 원호의 경우 많은 파라미터가 있다. A (arc) -->
+      <path d="m10 315 L110 215 A30 50 0 0 1 162 162 L172 152 A30 50 -45 0 1 215.1 109.9 L315 10" stroke="darkgrey" stroke-width="3" fill="black" fill-opacity=".2"/>
+    </svg>
+  
+    <svg width="350" height="350" viewBox="0 0 350 350" xmlns="http://www.w3.org/2000/svg">
+      <!-- ? -->
+      <path d="M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z" fill="green"/>
+      <path d="M230 80 A 45 45, 0, 1, 0, 275 125 L 275 80 Z" fill="green"/>
+      <path d="M80 230 A 45 45, 0, 0, 1, 125 275 L 120 230 Z" fill="pink"/>
+      <path d="M230 230 A 45 45, 0, 1, 1, 275 275 L 275 230 Z" fill="pink"/>
+    </svg>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Nanum+Gothic+Coding&display=swap');
 
 
@@ -223,7 +222,6 @@ body {
   box-shadow: 1.5px 1.5px 0 1.5px rgba(0, 0, 0, .8);
   transition: all .3s;
 }
-
 
 @media screen and (max-width: 680px){
   .modal-box{
