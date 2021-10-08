@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+
+html {
+  scrollbar-3dlight-color: #efefef;
+  scrollbar-arrow-color: #dfdfdf;
+  scrollbar-base-color: #efefef;
+  scrollbar-face-color: #dfdfdf;
+  scrollbar-track-color: #efefef;
+  scrollbar-darkshadow-color: #efefef;
+  scrollbar-highlight-color: #efefef;
+  scrollbar-shadow-color: #efefef;
+  -ms-overflow-style: none;
+  overflow: auto;
+}
+
+/* SCROLL */
+::-webkit-scrollbar {
+  width: 0px;
+}
+/* 스크롤바 색 */
+::-webkit-scrollbar-button {
+  display: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-style: none;
+}
+body{
+  min-height: 2000px;
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  mask: url(shape.svg);
+}
+.wrapper video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: ;
+}
+#bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white url(shape.svg) no-repeat center;
+  mix-blend-mode: screen;
+
+}
